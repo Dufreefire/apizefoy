@@ -1,13 +1,15 @@
 {
   "version": 2,
-  "rewrites": [
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
     {
       "source": "/api/zefoy",
-      "dest": "/api/index.js"
-    },
-    {
-      "source": "/api/(.*)",
-      "dest": "/api/index.js"
+      "dest": "index.js"
     }
   ]
 }
